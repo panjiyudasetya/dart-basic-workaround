@@ -1,9 +1,9 @@
-import 'package:tutorial_1/animal.d.dart';
+import 'package:tutorial_1/animal.dart';
 
 void main() => testAnimalInheritance();
 
 void testAnimalInheritance() {
-  var animals = [new Bird('Pigeon'), new Sheep('Shaun'), new Fish('Whale')];
+  var animals = [new Bird('Pigeon'), new Sheep('Shaun'), new Fish('Golden Fish')];
   for (Animal animal in animals) {
     animal.eat();
     print('My lifespan is ' + animal.lifespan().toString() + ' years.');
@@ -45,7 +45,7 @@ class Fish extends Animal implements Swimable {
 }
 
 class Sheep extends Animal implements Runable {
-  Sheep(String species) : super(species);
+  Sheep(String name) : super(name);
 
   @override
   void eat() {
@@ -65,7 +65,7 @@ class Sheep extends Animal implements Runable {
 
 class Bird extends Animal implements Flyable {
   
-  Bird(String species) : super(species);
+  Bird(String name) : super(name);
 
   @override
   void eat() {
